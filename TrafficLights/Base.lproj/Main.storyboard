@@ -16,18 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Piz-oP-OVQ">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Piz-oP-OVQ">
                                 <rect key="frame" x="125" y="84" width="140" height="446"/>
                                 <subviews>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K0b-Hd-uGr">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K0b-Hd-uGr">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </view>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cM6-HN-UD0">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cM6-HN-UD0">
                                         <rect key="frame" x="0.0" y="153" width="140" height="140"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                     </view>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxb-l3-WE6">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxb-l3-WE6">
                                         <rect key="frame" x="0.0" y="306" width="140" height="140"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
@@ -47,6 +47,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="trafficLightsControlButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jlr-14-iQ5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -59,6 +62,12 @@
                             <constraint firstItem="VDp-4M-SjG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vRS-MM-hp6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLight" destination="pxb-l3-WE6" id="Uxu-U9-XNI"/>
+                        <outlet property="orangeLight" destination="cM6-HN-UD0" id="Guw-Wm-FD2"/>
+                        <outlet property="redLight" destination="K0b-Hd-uGr" id="1fa-bW-sRh"/>
+                        <outlet property="trafficLightsControlButton" destination="VDp-4M-SjG" id="4wH-oN-5Hd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
